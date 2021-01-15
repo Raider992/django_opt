@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YDQtdCz0LjRgdGC0YDQsNGG0Lg=?=
+ =?utf-8?b?0LggdXNlcjEyMw==?=
+From: django@geekbrains.local
+To: django2@gb.local
+Date: Fri, 15 Jan 2021 11:17:59 -0000
+Message-ID: <161070947947.7784.15481818749603700480@DESKTOP-M0H3L9M>
+
+Для подтверждения регистрации пройдите по ссылке: http://localhost:8000/auth/verify/django2@gb.local/b0d9b252d425428704c4c0c98ad412b2c131912f
+-------------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="alert {% if user %}alert-success{% else %}alert-warning {% endif %} alert-dismissible fade show"
+         role="alert"
+         style="margin-top: 50px;">
+        <strong>Holy guacamole!</strong>
+        {% if user %}
+            <p>Поздравляем, {{ user.username }}, вы успешно зарегистрировались</p>
+            <a href="{% url 'main' %}"> На главную</a>
+        {% else %}
+            <p>К сожалению, аутентификация не пройдена, аккаунт не активирован</p>
+            <a href="{% url 'main' %}"> На главную</a>
+        {% endif %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endblock %}
