@@ -5,8 +5,33 @@ from django.urls import reverse, reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.views.generic.edit import CreateView, UpdateView
 
+from django.core.mail import send_mail
+from django.conf import settings
+
 from authapp.models import User
 from cartapp.models import Cart
+
+
+def send_verify_email(user):
+    verify_link = reverse('auth:verify', args=[user.email, user.activation_key])
+
+    subject = f'Подтверждение регистрации {user.username}'
+    message = f'Для подтверждения регистрации пройдите по ссылке: {settings.DOMAIN}{verify_link}'
+
+    return send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email], fail_silently=False)
+
+
+def verify(request, email, activation_key):
+    try:
+        user = User.objects.get(email=email)
+        if user.activation_key == activation_key and not user.is_activation_key_expired():
+            user.is_active = True
+            user.activation_key = None
+            user.save()
+            auth.login(request, user)
+            return render(request, 'authapp/verify.html')
+    except Exception as ex:
+        return HttpResponseRedirect(reverse('main'))
 
 
 class UserLoginView(LoginView):
@@ -16,11 +41,12 @@ class UserLoginView(LoginView):
     success_url = 'main'
 
     def get_context_data(self, **kwargs):
-        context = super(UserLoginView, self).get_context_data(**kwargs);
+        context = super(UserLoginView, self).get_context_data(**kwargs)
         context.update({'title': 'авторизация'})
         context.update({'style_link': 'css/auth-admin.css'})
         context.update({'script_link': 'js/auth-admin.js'})
         return context
+
 
 # Не вижу смысла ради двух строчек создавать класс, который съест больше памяти, чем функция
 def logout(request):
@@ -31,14 +57,19 @@ def logout(request):
 class UserSignUpView(CreateView):
     model = User
     template_name = 'authapp/register.html'
-    success_url = reverse_lazy('authapp:login')
+    success_url = reverse_lazy('auth:login')
     form_class = UserRegisterForm
+
+    def form_valid(self, form, **kwargs):
+        super().form_valid(form)
+        user = form.save()
+        send_verify_email(user)
+
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_context_data(self, **kwargs):
         context = super(UserSignUpView, self).get_context_data(**kwargs)
         context.update({'title': 'регистрация'})
-        context.update({'style_link': 'css/auth-admin.css'})
-        context.update({'script_link': 'js/auth-admin.js'})
         return context
 
 
