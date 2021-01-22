@@ -18,7 +18,7 @@
                         {{ message }}
                     {% endfor %}
                 {% else %}
-                    {% for error in form.non_field_errors%}
+                    {% for error in form.non_field_errors %}
                         {{ error }}
                     {% endfor %}
                 {% endif %}
@@ -36,17 +36,14 @@
                     <div class="form-group">
                         <label class="small mb-1" for="{{ form.username.id_for_label }}">Имя пользователя</label>
                         {{ form.username }}
-                        {#                        <input class="form-control py-4" id="inputEmailAddress" type="email"#}
-                        {#                               placeholder="Введите имя пользователя"/>#}
                     </div>
                     <div class="form-group">
                         <label class="small mb-1" for="{{ form.password.id_for_label }}">Пароль</label>
                         {{ form.password }}
-                        {#                        <input class="form-control py-4" id="inputPassword" type="password"#}
-                        {#                               placeholder="Введите пароль"/>#}
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                         <a class="small" href="#">Забыли пароль?</a>
+                        <a class="btn btn-primary" href='{% url 'social:begin' 'vk-oauth2' %}?next=/'>Войти через VK</a>
                         <input class="btn btn-primary" type="submit" value="Авторизоваться">
                     </div>
                 </form>

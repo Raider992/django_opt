@@ -8,6 +8,7 @@ from django.utils.timezone import now
 class User(AbstractUser):
     avatar = models.ImageField(upload_to='users_avatars', blank=True)
     birthdate = models.DateField(auto_now=False, blank=True, null=True)
+    age = models.PositiveIntegerField(verbose_name='возраст', default=18)
 
     activation_key = models.CharField(max_length=128, blank=True, null=True)
     activation_key_expires = models.DateTimeField(default=(now() + timedelta(hours=48)))
