@@ -10,12 +10,12 @@ class Cart(models.Model):
     quantity = models.PositiveSmallIntegerField(default=0)
     created_timestamp = models.DateTimeField(auto_now_add=True)
 
-    def count_total_price(self):
+    def get_total_price(self):
         carts = Cart.objects.filter(user=self.user)
 
         return sum(cart.sum() for cart in carts)
 
-    def count_total_quantity(self):
+    def get_total_quantity(self):
         carts = Cart.objects.filter(user=self.user)
 
         return sum(cart.quantity for cart in carts)
