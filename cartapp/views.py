@@ -35,8 +35,13 @@ def cart_edit(request, id, quantity):
         else:
             cart.delete()
         carts = Cart.objects.filter(user=request.user)
+        total_price = 0
+        for cart in carts:
+            total_price += cart.sum()
+
         context = {
             'carts': carts,
+            'total_price': total_price
         }
         result = render_to_string('cartapp/cart.html', context)
         return JsonResponse({'result': result})
@@ -55,42 +60,3 @@ def cart_clear(request):
     cart = Cart.objects.all()
     cart.delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-
-
-
-# @login_required
-# def cart_add_item(request, id_product=None):
-#     cart = Cart.objects.get(id=id_product)
-#     cart.quantity += 1
-#     cart.save()
-#     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-#
-#
-# @login_required
-# def cart_remove_item(request, id_product=None):
-#     cart = Cart.objects.get(id=id_product)
-#
-#     if cart.quantity > 1:
-#         cart.quantity -= 1
-#         cart.save()
-#         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-#
-#     if cart.quantity == 1:
-#         cart.delete()
-#         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-#
-#
-# @login_required
-# def cart_clear_position(request, id_product=None):
-#     cart = Cart.objects.get(id=id_product)
-#
-#     cart.delete()
-#     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-#
-#
-# @login_required
-# def cart_clear(request):
-#     cart = Cart.objects.all()
-#     cart.delete()
-#     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

@@ -23,7 +23,8 @@
                     <img width="100" height="100"
                          src="{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static 'vendor/img/users/default_avatar.jpg' %}{% endif %}"
                          class="img-thumbnail"
-                         alt="pic">
+                         alt="pic"
+                    >
                 </div>
                 <form action="{% url 'authapp:profile' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}

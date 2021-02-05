@@ -48,7 +48,6 @@ class Order(models.Model):
     def get_total_quantity(self):
         _items = self.orderitems.select_related()
         _total_quantity = sum(list(map(lambda x: x.quantity , _items)))
-
         return _total_quantity
 
     def get_total_price(self):
@@ -75,3 +74,6 @@ class OrderItem(models.Model):
 
     def get_product_cost(self):
         return self.product.price * self.quantity
+
+    def get_item(pk):
+        return OrderItem.objects.filter(pk=pk).first()
