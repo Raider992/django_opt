@@ -16,7 +16,7 @@ const beautifyFloat = num => {
         const floatPart = n - intPart;
         const resFloat = (floatPart + '').replace(/^0+/, '').replace(/\./, ',');
 
-        const resInt = reversed.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+        const resInt = (intPart + '').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 
         return resInt + resFloat
     } else {
@@ -54,7 +54,11 @@ window.onload = () => {
 
 
     const orderSummaryUpdate = (itemPrice, deltaQuantity) => {
-        deltaCost = itemPrice * deltaQuantity;
+        if (!isNaN(deltaQuantity)) {
+            deltaCost = itemPrice * deltaQuantity;
+        } else {
+            return
+        }
         orderTotalPrice = pFloat(orderTotalPrice);
         orderTotalPrice = (orderTotalPrice + parseInt(deltaCost)).toFixed(2);
         orderTotalPrice = beautifyFloat(orderTotalPrice);
@@ -65,6 +69,61 @@ window.onload = () => {
         document.querySelector('.order_total_quantity').innerText = orderTotalQuantity.toString();
         document.querySelector('.order_total_cost').innerText = orderTotalPrice;
     }
+
+    const orderSummaryRecalc = () => {
+        orderTotalPrice = 0;
+        orderTotalQuantity = 0;
+        for (let i = 0; i < TOTAL_FORMS; i++) {
+            if (quantityArray[i] && priceArray[i]) {
+                orderTotalQuantity += quantityArray[i];
+                orderTotalPrice += priceArray[i] * quantityArray[i];
+            }
+        }
+        console.log(orderTotalQuantity)
+        console.log(orderTotalPrice)
+        document.querySelector('.order_total_quantity').innerText = orderTotalQuantity.toString();
+        document.querySelector('.order_total_cost').innerText = orderTotalPrice;
+    }
+
+    const deleteOrderItem = (row) => {
+        let target_name = row[0].querySelector('input[type=number]').name;
+        const orderItemNum = parseInt(target_name.replace(/orderitems-/, '').replace(/-quantity/, ''));
+        let deltaQuantity = -quantityArray[orderItemNum];
+        orderSummaryUpdate(priceArray[orderItemNum], deltaQuantity);
+    }
+
+
+    $('.formset_row').formset({
+        addText: 'Добавить товар',
+        deleteText: 'Удалить товар',
+        prefix: 'orderitems',
+        removed: deleteOrderItem
+    });
+
+
+    $('.order_form').on('change', 'select', event => {
+        let target = event.target;
+        orderItemNum = parseInt(target.name.replace(/orderitems-/, '').replace(/-product/, ''));
+        let orderItemProductPK = target.options[target.selectedIndex].value;
+        if (orderItemProductPK) {
+            $.ajax({
+                url: '/order/product/' + parseInt(orderItemProductPK) + '/price',
+                success: function (data) {
+                    if (data.price) {
+                        priceArray[orderItemNum] = parseFloat(data.price);
+                        if (isNaN(quantityArray[orderItemNum])) {
+                            quantityArray[orderItemNum] = 0
+                        }
+                        let classString = `orderitems-${orderItemNum + 1}-product`
+                        let priceHTML = `<span class="${classString}">${pFloat(data.price)} руб.</span>`
+                        let currentTR = $('.order_form table').find(`tr:eq(${orderItemNum + 1})`);
+                        currentTR.find('td:eq(2)').html(priceHTML);
+                        orderSummaryRecalc();
+                    }
+                }
+            });
+        }
+    });
 
 
     document.querySelector('body').addEventListener('click', event => {

@@ -1,0 +1,1128 @@
+Using username "root".
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-65-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+Last login: Tue Feb  9 10:49:09 2021 from 185.135.150.227
+root@194-67-86-188:~# apt update
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packages [1,275 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packages [930 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal/main Translation-en [709 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 c-n-f Metadata [29.5                                                                              kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB                                                                             ]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal/universe i386 Packages [5,999 kB                                                                             ]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal/universe Translation-en [7,220                                                                              kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [224                                                                              kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [                                                                             265 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [522                                                                              kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,                                                                             012 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [27                                                                             2 kB]
+Get:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metada                                                                             ta [11.7 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages                                                                              [923 kB]
+Get:18 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages                                                                              [677 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [604                                                                              kB]
+Get:20 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en                                                                              [211 kB]
+Get:21 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Me                                                                             tadata [15.5 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [149                                                                              kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadat                                                                             a [6,164 B]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages                                                                              [663 kB]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [                                                                             519 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en                                                                              [104 kB]
+Get:27 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Met                                                                             adata [9,772 B]
+Fetched 34.2 MB in 7s (5,051 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+root@194-67-86-188:~# apt install nginx
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5
+  libwebp6 libxpm4 libxslt1.1 nginx-common nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5
+  libwebp6 libxpm4 libxslt1.1 nginx nginx-common nginx-core
+0 upgraded, 18 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,582 kB of archives.
+After this operation, 8,398 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all                                                                              2.37-1 [1,041 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all                                                                              2.13.1-2ubuntu3 [28.8 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64                                                                              2.13.1-2ubuntu3 [114 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo                                                                             8 amd64 2.0.3-0ubuntu1.20.04.1 [117 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ub                                                                             untu8 [2,194 B]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libjbig0 amd64 2.1-3.                                                                             1build1 [26.7 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libwebp6 amd64 0.6.1-                                                                             2 [185 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libtiff5 amd64 4.1.0+                                                                             git191117-2build1 [161 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libxpm4 amd64 1:3.5.1                                                                             2-1 [34.0 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libgd3 amd64 2.2.5-5                                                                             .2ubuntu2 [118 kB]
+Get:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common                                                                              all 1.18.0-0ubuntu1 [37.3 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod                                                                             -http-image-filter amd64 1.18.0-0ubuntu1 [14.3 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libxslt1.1 amd64 1.1                                                                             .34-4 [152 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod                                                                             -http-xslt-filter amd64 1.18.0-0ubuntu1 [12.6 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod                                                                             -mail amd64 1.18.0-0ubuntu1 [42.3 kB]
+Get:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod                                                                             -stream amd64 1.18.0-0ubuntu1 [66.9 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core a                                                                             md64 1.18.0-0ubuntu1 [425 kB]
+Get:18 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.                                                                             18.0-0ubuntu1 [3,624 B]
+Fetched 2,582 kB in 0s (5,868 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package fonts-dejavu-core.
+(Reading database ... 57098 files and directories currently installed.)
+Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1build1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../06-libwebp6_0.6.1-2_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../07-libtiff5_4.1.0+git191117-2build1_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd64.                                                                             deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../12-libxslt1.1_1.1.34-4_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.34-4) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../13-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64.d                                                                             eb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../14-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../15-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../16-nginx-core_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../17-nginx_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1) ...
+Setting up nginx-common (1.18.0-0ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service ? /lib                                                                             /systemd/system/nginx.service.
+Setting up libjbig0:amd64 (2.1-3.1build1) ...
+Setting up libwebp6:amd64 (0.6.1-2) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Setting up libxslt1.1:amd64 (1.1.34-4) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Setting up nginx-core (1.18.0-0ubuntu1) ...
+Setting up nginx (1.18.0-0ubuntu1) ...
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+root@194-67-86-188:~# apt install postgresql postgresql-contrib
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libllvm10 libpq5 postgresql-12 postgresql-client-12 postgresql-client-common
+  postgresql-common ssl-cert
+Suggested packages:
+  postgresql-doc postgresql-doc-12 libjson-perl openssl-blacklist
+Recommended packages:
+  sysstat
+The following NEW packages will be installed:
+  libllvm10 libpq5 postgresql postgresql-12 postgresql-client-12
+  postgresql-client-common postgresql-common postgresql-contrib ssl-cert
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
+Need to get 30.1 MB of archives.
+After this operation, 120 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libllvm10 amd64 1:10.                                                                             0.0-4ubuntu1 [15.3 MB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpq5 amd64                                                                              12.5-0ubuntu0.20.04.1 [115 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-cl                                                                             ient-common all 214ubuntu0.1 [28.2 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-cl                                                                             ient-12 amd64 12.5-0ubuntu0.20.04.1 [1,044 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 ssl-cert all 1.0.39 [                                                                             17.0 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-co                                                                             mmon all 214ubuntu0.1 [169 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-12                                                                              amd64 12.5-0ubuntu0.20.04.1 [13.4 MB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql al                                                                             l 12+214ubuntu0.1 [3,924 B]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-co                                                                             ntrib all 12+214ubuntu0.1 [3,932 B]
+Fetched 30.1 MB in 17s (1,740 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libllvm10:amd64.
+(Reading database ... 57339 files and directories currently installed.)
+Preparing to unpack .../0-libllvm10_1%3a10.0.0-4ubuntu1_amd64.deb ...
+Unpacking libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../1-libpq5_12.5-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libpq5:amd64 (12.5-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../2-postgresql-client-common_214ubuntu0.1_all.deb ...
+Unpacking postgresql-client-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-client-12.
+Preparing to unpack .../3-postgresql-client-12_12.5-0ubuntu0.20.04.1_amd64.deb .                                                                             ..
+Unpacking postgresql-client-12 (12.5-0ubuntu0.20.04.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../4-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../5-postgresql-common_214ubuntu0.1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postg                                                                             resql-common'
+Unpacking postgresql-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-12.
+Preparing to unpack .../6-postgresql-12_12.5-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-12 (12.5-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../7-postgresql_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql (12+214ubuntu0.1) ...
+Selecting previously unselected package postgresql-contrib.
+Preparing to unpack .../8-postgresql-contrib_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql-contrib (12+214ubuntu0.1) ...
+Setting up postgresql-client-common (214ubuntu0.1) ...
+Setting up libpq5:amd64 (12.5-0ubuntu0.20.04.1) ...
+Setting up libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Setting up postgresql-client-12 (12.5-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/share/postgresql/12/man/man1/psql.1.gz to provid                                                                             e /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up ssl-cert (1.0.39) ...
+Setting up postgresql-common (214ubuntu0.1) ...
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service ?                                                                              /lib/systemd/system/postgresql.service.
+Setting up postgresql-12 (12.5-0ubuntu0.20.04.1) ...
+Creating new PostgreSQL cluster 12/main ...
+/usr/lib/postgresql/12/bin/initdb -D /var/lib/postgresql/12/main --auth-local pe                                                                             er --auth-host md5
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/12/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Europe/Moscow
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
+Ver Cluster Port Status Owner    Data directory              Log file
+12  main    5432 down   postgres /var/lib/postgresql/12/main /var/log/postgresql                                                                             /postgresql-12-main.log
+update-alternatives: using /usr/share/postgresql/12/man/man1/postmaster.1.gz to                                                                              provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode
+Setting up postgresql-contrib (12+214ubuntu0.1) ...
+Setting up postgresql (12+214ubuntu0.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+root@194-67-86-188:~# apt install git-core
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Note, selecting 'git' instead of 'git-core'
+git is already the newest version (1:2.25.1-1ubuntu3).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@194-67-86-188:~# apt install python-venv
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package python-venv
+root@194-67-86-188:~# apt install python3-venv
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  python-pip-whl python3-distutils python3-lib2to3 python3.8-venv
+The following NEW packages will be installed:
+  python-pip-whl python3-distutils python3-lib2to3 python3-venv python3.8-venv
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,023 kB of archives.
+After this operation, 4,452 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.1 [1,799 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-lib2to3 all 3.8.5-1~20.04.1 [75.6 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distutils all 3.8.5-1~20.04.1 [141 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3.8-venv amd64 3.8.5-1~20.04 [5,440 B]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-venv amd64 3.8.2-0ubuntu2 [1,228 B]
+Fetched 2,023 kB in 0s (5,238 kB/s)
+Selecting previously unselected package python-pip-whl.
+(Reading database ... 59121 files and directories currently installed.)
+Preparing to unpack .../python-pip-whl_20.0.2-5ubuntu1.1_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.1) ...
+Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../python3-lib2to3_3.8.5-1~20.04.1_all.deb ...
+Unpacking python3-lib2to3 (3.8.5-1~20.04.1) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../python3-distutils_3.8.5-1~20.04.1_all.deb ...
+Unpacking python3-distutils (3.8.5-1~20.04.1) ...
+Selecting previously unselected package python3.8-venv.
+Preparing to unpack .../python3.8-venv_3.8.5-1~20.04_amd64.deb ...
+Unpacking python3.8-venv (3.8.5-1~20.04) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../python3-venv_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking python3-venv (3.8.2-0ubuntu2) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.1) ...
+Setting up python3-lib2to3 (3.8.5-1~20.04.1) ...
+Setting up python3-distutils (3.8.5-1~20.04.1) ...
+Setting up python3.8-venv (3.8.5-1~20.04) ...
+Setting up python3-venv (3.8.2-0ubuntu2) ...
+Processing triggers for man-db (2.9.1-1) ...
+root@194-67-86-188:~# apt install mc
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libssh2-1 mc-data
+Suggested packages:
+  arj catdvi | texlive-binaries dbview djvulibre-bin epub-utils genisoimage gv imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+  python-boto python-tz xpdf | pdf-viewer zip
+Recommended packages:
+  unzip
+The following NEW packages will be installed:
+  libssh2-1 mc mc-data
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1,817 kB of archives.
+After this operation, 7,994 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 libssh2-1 amd64 1.8.0-2.1build1 [75.4 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 mc-data all 3:4.8.24-2ubuntu1 [1,265 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 mc amd64 3:4.8.24-2ubuntu1 [477 kB]
+Fetched 1,817 kB in 0s (4,599 kB/s)
+Selecting previously unselected package libssh2-1:amd64.
+(Reading database ... 59431 files and directories currently installed.)
+Preparing to unpack .../libssh2-1_1.8.0-2.1build1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.8.0-2.1build1) ...
+Selecting previously unselected package mc-data.
+Preparing to unpack .../mc-data_3%3a4.8.24-2ubuntu1_all.deb ...
+Unpacking mc-data (3:4.8.24-2ubuntu1) ...
+Selecting previously unselected package mc.
+Preparing to unpack .../mc_3%3a4.8.24-2ubuntu1_amd64.deb ...
+Unpacking mc (3:4.8.24-2ubuntu1) ...
+Setting up mc-data (3:4.8.24-2ubuntu1) ...
+Setting up libssh2-1:amd64 (1.8.0-2.1build1) ...
+Setting up mc (3:4.8.24-2ubuntu1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+root@194-67-86-188:~# nano /etc/postgresql/12/main/pg_hba.conf
+root@194-67-86-188:~# systemctl restart postgresql
+root@194-67-86-188:~# systemctl status postgresql
+? postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Tue 2021-02-09 13:20:38 MSK; 21s ago
+    Process: 5901 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 5901 (code=exited, status=0/SUCCESS)
+
+Feb 09 13:20:38 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Starting PostgreSQL RDBMS...
+Feb 09 13:20:38 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Finished PostgreSQL RDBMS.
+root@194-67-86-188:~# useradd -g www-data -m -django
+useradd: invalid home directory 'jango'
+root@194-67-86-188:~# useradd -g www-data -m django
+root@194-67-86-188:~# cd home/django
+-bash: cd: home/django: No such file or directory
+root@194-67-86-188:~# cd /home/django
+root@194-67-86-188:/home/django# ls -la
+total 20
+drwxr-xr-x 2 django www-data 4096 Feb  9 13:23 .
+drwxr-xr-x 3 root   root     4096 Feb  9 13:23 ..
+-rw-r--r-- 1 django www-data  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 django www-data 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 django www-data  807 Feb 25  2020 .profile
+root@194-67-86-188:/home/django# git clone  be installed:
+fatal: repository 'be' does not exist
+root@194-67-86-188:/home/django#   libssh2-1 mc-data
+-bash: libssh2-1: command not found
+root@194-67-86-188:/home/django# Suggested packages:
+-bash: Suggested: command not found
+root@194-67-86-188:/home/django# git clone  be installed:
+fatal: repository 'be' does not exist
+root@194-67-86-188:/home/django#   libssh2-1 mc-data
+-bash: libssh2-1: command not found
+root@194-67-86-188:/home/django# Suggested packages:
+-bash: Suggested: command not found
+root@194-67-86-188:/home/django# git clone git@github.com:Raider992/MyShop_server.git
+Cloning into 'MyShop_server'...
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,140.82.121.3' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+root@194-67-86-188:/home/django# ssh-keygen -t ed25519 -C "19stargazer92@gmail.com"                                                                          Generating public/private ed25519 key pair.
+Enter file in which to save the key (/root/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_ed25519
+Your public key has been saved in /root/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:w2i7iPhEImJCV6N4eO2aETntMiQFEndstIsfCidCRpo 19stargazer92@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|o+o+oo           |
+|+o+.O..          |
+|EB @.o           |
+|+ *.=. o         |
+|O.++ooo S        |
+|** o*o . .       |
+|  oo. .          |
+| o . . .         |
+|..o . .          |
++----[SHA256]-----+
+root@194-67-86-188:/home/django# eval "$(ssh-agent -s)"
+Agent pid 6191
+root@194-67-86-188:/home/django# ssh-add ~/.ssh/id_ed25519
+Enter passphrase for /root/.ssh/id_ed25519:
+Identity added: /root/.ssh/id_ed25519 (19stargazer92@gmail.com)
+root@194-67-86-188:/home/django# git clone git@github.com:Raider992/MyShop_server.git
+Cloning into 'MyShop_server'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+root@194-67-86-188:/home/django# nano /root/.ssh/id_ed25519.pub
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /root/.ssh/id_ed25519.pub
+root@194-67-86-188:/home/django# nano /root/.ssh/id_ed25519.pub
+root@194-67-86-188:/home/django# ^C
+root@194-67-86-188:/home/django# nano /root/.ssh/id_ed25519.pub
+root@194-67-86-188:/home/django# grep nano
+^C
+root@194-67-86-188:/home/django# git clone git@github.com:Raider992/MyShop_server.git
+Cloning into 'MyShop_server'...
+Warning: Permanently added the RSA host key for IP address '140.82.121.4' to the list of known hosts.
+remote: Enumerating objects: 176, done.
+remote: Counting objects: 100% (176/176), done.
+remote: Compressing objects: 100% (131/131), done.
+remote: Total 176 (delta 28), reused 176 (delta 28), pack-reused 0
+Receiving objects: 100% (176/176), 9.73 MiB | 9.42 MiB/s, done.
+Resolving deltas: 100% (28/28), done.
+root@194-67-86-188:/home/django# ls
+MyShop_server
+root@194-67-86-188:/home/django# cd MyShop_server/
+root@194-67-86-188:/home/django/MyShop_server# python3 -m venv env
+root@194-67-86-188:/home/django/MyShop_server# ls
+adminapp  authapp  cartapp  env  mainapp  manage.py  my_shop  ordersapp  README.md  requirements.txt  static
+root@194-67-86-188:/home/django/MyShop_server# source env/bin/activate
+(env) root@194-67-86-188:/home/django/MyShop_server# pip3 install -r requirements.txt
+Collecting asgiref==3.3.1
+  Downloading asgiref-3.3.1-py3-none-any.whl (19 kB)
+Collecting astroid==2.4.2
+  Downloading astroid-2.4.2-py3-none-any.whl (213 kB)
+     |????????????????????????????????| 213 kB 1.8 MB/s
+Collecting Basket==1.0
+  Downloading Basket-1.0.tar.gz (15 kB)
+Collecting certifi==2020.12.5
+  Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+     |????????????????????????????????| 147 kB 2.5 MB/s
+Collecting cffi==1.14.4
+  Downloading cffi-1.14.4-cp38-cp38-manylinux1_x86_64.whl (411 kB)
+     |????????????????????????????????| 411 kB 2.7 MB/s
+Collecting chardet==4.0.0
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+     |????????????????????????????????| 178 kB 3.9 MB/s
+Collecting colorama==0.4.4
+  Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Collecting cryptography==3.3.1
+  Downloading cryptography-3.3.1-cp36-abi3-manylinux2010_x86_64.whl (2.6 MB)
+     |????????????????????????????????| 2.6 MB 67 kB/s
+Collecting defusedxml==0.7.0rc2
+  Downloading defusedxml-0.7.0rc2-py2.py3-none-any.whl (25 kB)
+Collecting Django==3.1.5
+  Downloading Django-3.1.5-py3-none-any.whl (7.8 MB)
+     |????????????????????????????????| 7.8 MB 9.0 MB/s
+Collecting django-cors-headers==3.6.0
+  Downloading django_cors_headers-3.6.0-py3-none-any.whl (12 kB)
+Collecting idna==2.10
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+     |????????????????????????????????| 58 kB 6.5 MB/s
+Collecting isort==5.7.0
+  Downloading isort-5.7.0-py3-none-any.whl (104 kB)
+     |????????????????????????????????| 104 kB 18.8 MB/s
+Collecting lazy-object-proxy==1.5.2
+  Downloading lazy_object_proxy-1.5.2-cp38-cp38-manylinux1_x86_64.whl (54 kB)
+     |????????????????????????????????| 54 kB 3.2 MB/s
+Collecting mccabe==0.6.1
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting memory-profiler==0.58.0
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting mysql-connector-python==8.0.22
+  Downloading mysql_connector_python-8.0.22-cp38-cp38-manylinux1_x86_64.whl (18.0 MB)
+     |????????????????????????????????| 18.0 MB 2.5 kB/s
+Collecting numpy==1.19.5
+  Downloading numpy-1.19.5-cp38-cp38-manylinux2010_x86_64.whl (14.9 MB)
+     |????????????????????????????????| 14.9 MB 10.0 kB/s
+Collecting oauthlib==3.1.0
+  Downloading oauthlib-3.1.0-py2.py3-none-any.whl (147 kB)
+     |????????????????????????????????| 147 kB 21.4 MB/s
+Collecting Pillow==8.1.0
+  Downloading Pillow-8.1.0-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)
+     |????????????????????????????????| 2.2 MB 35 kB/s
+Collecting protobuf==3.14.0
+  Downloading protobuf-3.14.0-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+     |????????????????????????????????| 1.0 MB 4.0 MB/s
+Collecting psutil==5.8.0
+  Downloading psutil-5.8.0-cp38-cp38-manylinux2010_x86_64.whl (296 kB)
+     |????????????????????????????????| 296 kB 3.9 MB/s
+Collecting pycparser==2.20
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+     |????????????????????????????????| 112 kB 21.8 MB/s
+Collecting PyJWT==2.0.1
+  Downloading PyJWT-2.0.1-py3-none-any.whl (15 kB)
+Collecting pylint==2.6.0
+  Downloading pylint-2.6.0-py3-none-any.whl (325 kB)
+     |????????????????????????????????| 325 kB 18.4 MB/s
+Collecting python3-openid==3.2.0
+  Downloading python3_openid-3.2.0-py3-none-any.whl (133 kB)
+     |????????????????????????????????| 133 kB 20.4 MB/s
+Collecting pytz==2020.4
+  Downloading pytz-2020.4-py2.py3-none-any.whl (509 kB)
+     |????????????????????????????????| 509 kB 27.2 MB/s
+Collecting requests==2.25.1
+  Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+     |????????????????????????????????| 61 kB 7.6 MB/s
+Collecting requests-oauthlib==1.3.0
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting six==1.15.0
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting social-auth-app-django==4.0.0
+  Downloading social_auth_app_django-4.0.0-py3-none-any.whl (24 kB)
+Collecting social-auth-core==4.0.3
+  Downloading social_auth_core-4.0.3-py3-none-any.whl (328 kB)
+     |????????????????????????????????| 328 kB 21.1 MB/s
+Collecting sqlparse==0.4.1
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+     |????????????????????????????????| 42 kB 1.1 MB/s
+Collecting toml==0.10.2
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting typed-ast==1.4.1
+  Downloading typed_ast-1.4.1-cp38-cp38-manylinux1_x86_64.whl (768 kB)
+     |????????????????????????????????| 768 kB 15.9 MB/s
+Collecting urllib3==1.26.2
+  Downloading urllib3-1.26.2-py2.py3-none-any.whl (136 kB)
+     |????????????????????????????????| 136 kB 26.4 MB/s
+Collecting wrapt==1.12.1
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.8.6-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
+     |????????????????????????????????| 3.0 MB 19.3 MB/s
+Building wheels for collected packages: Basket, memory-profiler, wrapt
+  Building wheel for Basket (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /home/django/MyShop_server/env/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-8cvf8is8/Basket/setup.py'"'"'; __file__='"'"'/tmp/pip-install-8cvf8is8/Basket/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-ag6bh85x
+       cwd: /tmp/pip-install-8cvf8is8/Basket/
+  Complete output (7 lines):
+  Warning: 'classifiers' should be a list, got type 'tuple'
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for Basket
+  Running setup.py clean for Basket
+  Building wheel for memory-profiler (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /home/django/MyShop_server/env/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-8cvf8is8/memory-profiler/setup.py'"'"'; __file__='"'"'/tmp/pip-install-8cvf8is8/memory-profiler/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-b_s9p7f8
+       cwd: /tmp/pip-install-8cvf8is8/memory-profiler/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for memory-profiler
+  Running setup.py clean for memory-profiler
+  Building wheel for wrapt (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /home/django/MyShop_server/env/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-8cvf8is8/wrapt/setup.py'"'"'; __file__='"'"'/tmp/pip-install-8cvf8is8/wrapt/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-16_g96hs
+       cwd: /tmp/pip-install-8cvf8is8/wrapt/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for wrapt
+  Running setup.py clean for wrapt
+Failed to build Basket memory-profiler wrapt
+ERROR: astroid 2.4.2 has requirement lazy-object-proxy==1.4.*, but you'll have lazy-object-proxy 1.5.2 which is incompatible.
+Installing collected packages: asgiref, lazy-object-proxy, six, wrapt, astroid, Basket, certifi, pycparser, cffi, chardet, colorama, cryptography, defusedxml, sqlparse, pytz, Django, django-cors-headers, idna, isort, mccabe, psutil, memory-profiler, protobuf, mysql-connector-python, numpy, oauthlib, Pillow, PyJWT, toml, pylint, python3-openid, urllib3, requests, requests-oauthlib, social-auth-core, social-auth-app-django, typed-ast, psycopg2-binary
+    Running setup.py install for wrapt ... done
+    Running setup.py install for Basket ... done
+    Running setup.py install for memory-profiler ... done
+Successfully installed Basket-1.0 Django-3.1.5 Pillow-8.1.0 PyJWT-2.0.1 asgiref-3.3.1 astroid-2.4.2 certifi-2020.12.5 cffi-1.14.4 chardet-4.0.0 colorama-0.4.4 cryptography-3.3.1 defusedxml-0.7.0rc2 django-cors-headers-3.6.0 idna-2.10 isort-5.7.0 lazy-object-proxy-1.5.2 mccabe-0.6.1 memory-profiler-0.58.0 mysql-connector-python-8.0.22 numpy-1.19.5 oauthlib-3.1.0 protobuf-3.14.0 psutil-5.8.0 psycopg2-binary-2.8.6 pycparser-2.20 pylint-2.6.0 python3-openid-3.2.0 pytz-2020.4 requests-2.25.1 requests-oauthlib-1.3.0 six-1.15.0 social-auth-app-django-4.0.0 social-auth-core-4.0.3 sqlparse-0.4.1 toml-0.10.2 typed-ast-1.4.1 urllib3-1.26.2 wrapt-1.12.1
+(env) root@194-67-86-188:/home/django/MyShop_server# pip3 install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+     |????????????????????????????????| 77 kB 1.6 MB/s
+Requirement already satisfied: setuptools>=3.0 in ./env/lib/python3.8/site-packages (from gunicorn) (44.0.0)
+Installing collected packages: gunicorn
+Successfully installed gunicorn-20.0.4
+(env) root@194-67-86-188:/home/django/MyShop_server# psql -U postrges
+psql: error: FATAL:  Peer authentication failed for user "postrges"
+(env) root@194-67-86-188:/home/django/MyShop_server# psql -U postgres
+psql (12.5 (Ubuntu 12.5-0ubuntu0.20.04.1))
+Type "help" for help.
+
+postgres=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+(3 rows)
+
+postgres=# create database geekshop
+postgres-# ;
+CREATE DATABASE
+postgres=# \q
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py migrate
+/home/django/MyShop_server/ordersapp/views.py:137: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if update_fields is 'quantity' or 'products':
+Operations to perform:
+  Apply all migrations: admin, auth, authapp, cartapp, contenttypes, mainapp, ordersapp, sessions, social_django
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying authapp.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying authapp.0002_auto_20210122_1332... OK
+  Applying authapp.0003_auto_20210122_1336... OK
+  Applying authapp.0004_auto_20210126_1329... OK
+  Applying authapp.0005_auto_20210128_0038... OK
+  Applying authapp.0006_auto_20210202_1940... OK
+  Applying authapp.0007_auto_20210205_1342... OK
+  Applying mainapp.0001_initial... OK
+  Applying cartapp.0001_initial... OK
+  Applying mainapp.0002_product_stored_quantity... OK
+  Applying mainapp.0003_auto_20210205_1342... OK
+  Applying ordersapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+  Applying social_django.0001_initial... OK
+  Applying social_django.0002_add_related_name... OK
+  Applying social_django.0003_alter_email_max_length... OK
+  Applying social_django.0004_auto_20160423_0400... OK
+  Applying social_django.0005_auto_20160727_2333... OK
+  Applying social_django.0006_partial... OK
+  Applying social_django.0007_code_timestamp... OK
+  Applying social_django.0008_partial_timestamp... OK
+  Applying social_django.0009_auto_20191118_0520... OK
+  Applying social_django.0010_uid_db_index... OK
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py fill_db
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/django/MyShop_server/mainapp/management/commands/fill_db.py", line 22, in handle
+    new_category = ProductCategory(**category)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/db/models/base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: ProductCategory() got an unexpected keyword argument 'model'
+(env) root@194-67-86-188:/home/django/MyShop_server# ls
+adminapp  authapp  cartapp  env  mainapp  manage.py  my_shop  ordersapp  README.md  requirements.txt  static
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py loaddata authapp/fixtures/user.json
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/commands/loaddata.py", line 72, in handle
+    self.loaddata(fixture_labels)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/commands/loaddata.py", line 114, in loaddata
+    self.load_label(fixture_label)
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/management/commands/loaddata.py", line 172, in load_label
+    for obj in objects:
+  File "/home/django/MyShop_server/env/lib/python3.8/site-packages/django/core/serializers/json.py", line 67, in Deserializer
+    stream_or_string = stream_or_string.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc0 in position 1820: invalid start byte
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py loaddata mainapp/json/categories.json
+Installed 5 object(s) from 1 fixture(s)
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py loaddata mainapp/json/products.json
+Installed 6 object(s) from 1 fixture(s)
+(env) root@194-67-86-188:/home/django/MyShop_server# py manage.py createsuperuser
+-bash: py: command not found
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py createsuperuser
+Имя пользователя: django
+Адрес электронной почты: 19stargazer92@gmail.com
+Password:
+Password (again):
+Введённый пароль слишком короткий. Он должен содержать как минимум 8 символов.
+Введённый пароль слишком широко распространён.
+Введённый пароль состоит только из цифр.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(env) root@194-67-86-188:/home/django/MyShop_server# python3 manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 09, 2021 - 15:24:01
+Django version 3.1.5, using settings 'my_shop.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) root@194-67-86-188:/home/django/MyShop_server# nano /etc/systemd/system/gunicorn.service
+(env) root@194-67-86-188:/home/django/MyShop_server# nano /etc/systemd/system/gunicorn.service
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl enable gunicorn
+Created symlink /etc/systemd/system/multi-user.target.wants/gunicorn.service ? /etc/systemd/system/gunicorn.service.
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl start gunicorn
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl status gunicorn
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:39:32 MSK; 15s ago
+    Process: 8453 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8453 (code=exited, status=203/EXEC)
+
+Feb 09 15:39:32 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:39:32 194-67-86-188.cloudvps.regruhosting.ru systemd[8453]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:39:32 194-67-86-188.cloudvps.regruhosting.ru systemd[8453]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:39:32 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:39:32 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+lines 1-11/11 (END)
+^C
+(env) root@194-67-86-188:/home/django/MyShop_server# chown -R django /home/django/MyShop_server
+(env) root@194-67-86-188:/home/django/MyShop_server# chmod -R 755 /home/django/MyShop_server/
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl restart gunicorn
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl status gunicorn
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:42:59 MSK; 6s ago
+    Process: 8563 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8563 (code=exited, status=203/EXEC)
+
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+lines 1-11/11 (END)
+^C
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl status gunicorn
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:42:59 MSK; 44s ago
+    Process: 8563 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8563 (code=exited, status=203/EXEC)
+
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+...skipping...
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:42:59 MSK; 44s ago
+    Process: 8563 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8563 (code=exited, status=203/EXEC)
+
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOC
+
+set: enabled)
+ ago
+access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.sock my_shop.wsgi (code=exited, status=203/EXEC)
+
+
+icorn daemon.
+.service: Failed to execute command: No such file or directory
+.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/gunicorn: No such file or directory
+rvice: Main process exited, code=exited, status=203/EXEC
+rvice: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:42:59 MSK; 44s ago
+    Process: 8563 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8563 (code=exited, status=203/EXEC)
+
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2021-02-09 15:42:59 MSK; 44s ago
+    Process: 8563 ExecStart=/home/django/MyShop_server/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/MyShop_server/my_shop.so>
+   Main PID: 8563 (code=exited, status=203/EXEC)
+
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed to execute command: No such file or directory
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[8563]: gunicorn.service: Failed at step EXEC spawning /home/django/MyShop_server/django2/bin/>
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Main process exited, code=exited, status=203/EXEC
+Feb 09 15:42:59 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: gunicorn.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-11/11 (END)
+^C
+(env) root@194-67-86-188:/home/django/MyShop_server# ls
+adminapp  authapp  cartapp  env  mainapp  manage.py  my_shop  ordersapp  README.md  requirements.txt  static
+(env) root@194-67-86-188:/home/django/MyShop_server# ls env
+bin  include  lib  lib64  pyvenv.cfg  share
+(env) root@194-67-86-188:/home/django/MyShop_server# ls env/bin
+activate       Activate.ps1  django-admin     easy_install-3.8  f2py3     isort                   pip     __pycache__  python     symilar
+activate.csh   basket        django-admin.py  epylint           f2py3.8   isort-identify-imports  pip3    pylint       python3
+activate.fish  chardetect    easy_install     f2py              gunicorn  mprof                   pip3.8  pyreverse    sqlformat
+(env) root@194-67-86-188:/home/django/MyShop_server# ls -l env/bin
+total 112
+-rwxr-xr-x 1 django root 2208 Feb  9 13:51 activate
+-rwxr-xr-x 1 django root 1260 Feb  9 13:51 activate.csh
+-rwxr-xr-x 1 django root 2412 Feb  9 13:51 activate.fish
+-rwxr-xr-x 1 django root 8834 Feb  9 13:51 Activate.ps1
+-rwxr-xr-x 1 django root  397 Feb  9 13:56 basket
+-rwxr-xr-x 1 django root  247 Feb  9 13:56 chardetect
+-rwxr-xr-x 1 django root  289 Feb  9 13:56 django-admin
+-rwxr-xr-x 1 django root  679 Feb  9 13:56 django-admin.py
+-rwxr-xr-x 1 django root  256 Feb  9 13:51 easy_install
+-rwxr-xr-x 1 django root  256 Feb  9 13:51 easy_install-3.8
+-rwxr-xr-x 1 django root  245 Feb  9 13:56 epylint
+-rwxr-xr-x 1 django root  242 Feb  9 13:56 f2py
+-rwxr-xr-x 1 django root  242 Feb  9 13:56 f2py3
+-rwxr-xr-x 1 django root  242 Feb  9 13:56 f2py3.8
+-rwxr-xr-x 1 django root  243 Feb  9 13:58 gunicorn
+-rwxr-xr-x 1 django root  235 Feb  9 13:56 isort
+-rwxr-xr-x 1 django root  269 Feb  9 13:56 isort-identify-imports
+-rwxr-xr-x 1 django root  431 Feb  9 13:56 mprof
+-rwxr-xr-x 1 django root  247 Feb  9 13:51 pip
+-rwxr-xr-x 1 django root  247 Feb  9 13:51 pip3
+-rwxr-xr-x 1 django root  247 Feb  9 13:51 pip3.8
+drwxr-xr-x 2 django root 4096 Feb  9 13:56 __pycache__
+-rwxr-xr-x 1 django root  243 Feb  9 13:56 pylint
+-rwxr-xr-x 1 django root  249 Feb  9 13:56 pyreverse
+lrwxrwxrwx 1 django root    7 Feb  9 13:51 python -> python3
+lrwxrwxrwx 1 django root   16 Feb  9 13:51 python3 -> /usr/bin/python3
+-rwxr-xr-x 1 django root  242 Feb  9 13:56 sqlformat
+-rwxr-xr-x 1 django root  245 Feb  9 13:56 symilar
+(env) root@194-67-86-188:/home/django/MyShop_server# nano /etc/systemd/system/gunicorn.service
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl restart gunicorn
+Warning: The unit file, source configuration file or drop-ins of gunicorn.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl daemon-reload
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl restart gunicorn
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl status gunicorn
+? gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2021-02-09 15:49:51 MSK; 6s ago
+   Main PID: 8800 (gunicorn)
+      Tasks: 4 (limit: 1158)
+     Memory: 107.3M
+     CGroup: /system.slice/gunicorn.service
+             ??8800 /home/django/MyShop_server/env/bin/python3 /home/django/MyShop_server/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/>
+             ??8812 /home/django/MyShop_server/env/bin/python3 /home/django/MyShop_server/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/>
+             ??8813 /home/django/MyShop_server/env/bin/python3 /home/django/MyShop_server/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/>
+             ??8814 /home/django/MyShop_server/env/bin/python3 /home/django/MyShop_server/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/>
+
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started gunicorn daemon.
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8800]: [2021-02-09 15:49:51 +0300] [8800] [INFO] Starting gunicorn 20.0.4
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8800]: [2021-02-09 15:49:51 +0300] [8800] [INFO] Listening at: unix:/home/django/MyShop_serv>
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8800]: [2021-02-09 15:49:51 +0300] [8800] [INFO] Using worker: sync
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8812]: [2021-02-09 15:49:51 +0300] [8812] [INFO] Booting worker with pid: 8812
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8813]: [2021-02-09 15:49:51 +0300] [8813] [INFO] Booting worker with pid: 8813
+Feb 09 15:49:51 194-67-86-188.cloudvps.regruhosting.ru gunicorn[8814]: [2021-02-09 15:49:51 +0300] [8814] [INFO] Booting worker with pid: 8814
+lines 1-19/19 (END)
+^C
+(env) root@194-67-86-188:/home/django/MyShop_server# nano /etc/nginx/sites-available/my_shop
+(env) root@194-67-86-188:/home/django/MyShop_server# mc
+
+(env) root@194-67-86-188:/home/django/MyShop_server# ls /etc/nginx/sites-available/
+default  my_shop
+(env) root@194-67-86-188:/home/django/MyShop_server# ln -s /etc/nginx/sites-available/my_shop
+ln: failed to create symbolic link './my_shop': File exists
+(env) root@194-67-86-188:/home/django/MyShop_server# ln -s /etc/nginx/sites-available/my_shop /etc/nginx/sites-enabled/
+(env) root@194-67-86-188:/home/django/MyShop_server# mc
+
+root@194-67-86-188:/home/django/MyShop_server# /etc/nginx
+bash: /etc/nginx: Is a directory
+
+(env) root@194-67-86-188:/home/django/MyShop_server# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl restart nginx
+(env) root@194-67-86-188:/home/django/MyShop_server# systemctl status nginx
+? nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2021-02-09 16:14:16 MSK; 5s ago
+       Docs: man:nginx(8)
+    Process: 9375 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 9385 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 9387 (nginx)
+      Tasks: 2 (limit: 1158)
+     Memory: 2.6M
+     CGroup: /system.slice/nginx.service
+             ??9387 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             ??9388 nginx: worker process
+
+Feb 09 16:14:16 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Starting A high performance web server and a reverse proxy server...
+Feb 09 16:14:16 194-67-86-188.cloudvps.regruhosting.ru systemd[1]: Started A high performance web server and a reverse proxy server.
+(env) root@194-67-86-188:/home/django/MyShop_server#
