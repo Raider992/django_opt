@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from authapp.forms import UserLoginForm, UserRegisterForm, UserProfileForm
+from authapp.forms import UserLoginForm, UserRegisterForm, UserProfileForm, UserProfileEditForm
 from django.contrib import auth, messages
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.views import LoginView
@@ -73,43 +73,48 @@ class UserSignUpView(CreateView):
         return context
 
 
-class UserProfileView(UpdateView):
-    model = User
-    template_name = 'authapp/profile.html'
-    success_url = reverse_lazy('auth:profile')
-    form_class = UserProfileForm
+# class UserProfileView(UpdateView):
+#     model = User
+#     template_name = 'authapp/profile.html'
+#     success_url = reverse_lazy('auth:profile')
+#     form_class = UserProfileForm
+#
+#
+#     def get_context_data(self, request, **kwargs):
+#         context = super(UserProfileView, self).get_context_data(**kwargs)
+#         context.update({'title': 'профиль'})
+#         context.update({'style_link': 'css/profile.css'})
+#
+#         carts = Cart.objects.filter(user=request.user)
+#         context.update({'carts': carts})
+#         return context
 
-    def get_context_data(self, request, **kwargs):
-        context = super(UserProfileView, self).get_context_data(**kwargs)
-        context.update({'title': 'профиль'})
-        context.update({'style_link': 'css/profile.css'})
+def profile(request):
+    if request.method == "POST":
+        form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
+        profile_form = UserProfileEditForm(data=request.POST, instance=request.user.userprofile)
+        if form.is_valid() and profile_form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('auth:profile'))
 
-        carts = Cart.objects.filter(user=request.user)
-        context.update({'carts': carts})
-        return context
+    else:
+        form = UserProfileForm(instance=request.user)
+        profile_form = UserProfileEditForm(instance=request.user.userprofile)
 
-# def profile(request):
-#     if request.method == "POST":
-#         form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect(reverse('auth:profile'))
-#
-#     else:
-#         form = UserProfileForm(instance=request.user)
-#
-#     carts = Cart.objects.filter(user=request.user)
-#
-#     context = {
-#         'title': 'профиль',
-#         'style_link': 'css/profile.css',
-#
-#         'carts': carts,
-#
-#         'form': form
-#     }
-#
-#     return render(request, 'authapp/profile.html', context)
+    carts = Cart.objects.filter(user=request.user)
+
+    context = {
+        'title': 'профиль',
+        'style_link': 'css/profile.css',
+
+        'carts': carts,
+
+        'form': form,
+
+        'profile_form': profile_form
+    }
+
+    return render(request, 'authapp/profile.html', context)
 
 # def login(request):
 #     if request.method == 'POST':
