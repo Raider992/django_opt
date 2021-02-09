@@ -1,0 +1,73 @@
+ 1  logout
+    2  apt update
+    3  apt install nginx
+    4  apt install postgresql postgresql-contrib
+    5  apt install git-core
+    6  apt install python-venv
+    7  apt install python3-venv
+    8  apt install mc
+    9  nano /etc/postgresql/12/main/pg_hba.conf
+   10  systemctl restart postgresql
+   11  systemctl status postgresql
+   12  useradd -g www-data -m -django
+   13  useradd -g www-data -m django
+   14  cd home/django
+   15  cd /home/django
+   16  ls -la
+   17  git clone  be installed:
+   18  Suggested packages:
+   19  git clone  be installed:
+   20  Suggested packages:
+   21  git clone git@github.com:Raider992/MyShop_server.git
+   22  ssh-keygen -t ed25519 -C "19stargazer92@gmail.com"
+   23  eval "$(ssh-agent -s)"
+   24  ssh-add ~/.ssh/id_ed25519
+   25  git clone git@github.com:Raider992/MyShop_server.git
+   26  nano /root/.ssh/id_ed25519.pub
+   27  grep nano
+   28  git clone git@github.com:Raider992/MyShop_server.git
+   29  ls
+   30  cd MyShop_server/
+   31  python3 -m venv env
+   32  ls
+   33  source env/bin/activate
+   34  pip3 install -r requirements.txt
+   35  pip3 install gunicorn
+   36  psql -U postrges
+   37  psql -U postgres
+   38  python3 manage.py migrate
+   39  python3 manage.py fill_db
+   40  ls
+   41  python3 manage.py loaddata authapp/fixtures/user.json
+   42  python3 manage.py loaddata mainapp/json/categories.json
+   43  python3 manage.py loaddata mainapp/json/products.json
+   44  py manage.py createsuperuser
+   45  python3 manage.py createsuperuser
+   46  python3 manage.py runserver
+   47  nano /etc/systemd/system/gunicorn.service
+   48  systemctl enable gunicorn
+   49  systemctl start gunicorn
+   50  systemctl status gunicorn
+   51  chown -R django /home/django/MyShop_server
+   52  chmod -R 755 /home/django/MyShop_server/
+   53  systemctl restart gunicorn
+   54  systemctl status gunicorn
+   55  ls
+   56  ls env
+   57  ls env/bin
+   58  ls -l env/bin
+   59  nano /etc/systemd/system/gunicorn.service
+   60  systemctl restart gunicorn
+   61  systemctl daemon-reload
+   62  systemctl restart gunicorn
+   63  systemctl status gunicorn
+   64  nano /etc/nginx/sites-available/my_shop
+   65  mc
+   66  ls /etc/nginx/sites-available/
+   67  ln -s /etc/nginx/sites-available/my_shop
+   68  ln -s /etc/nginx/sites-available/my_shop /etc/nginx/sites-enabled/
+   69  mc
+   70  nginx -t
+   71  systemctl restart nginx
+   72  systemctl status nginx
+   73  history
